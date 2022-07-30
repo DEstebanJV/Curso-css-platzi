@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* pseudoclase hover (cuando el mouse pasa por encima) */
+
+        p:hover{
+            color: aqua;
+        }
+        /* llamado a hijos */
+        div p:nth-child(1){
+            color: blue;
+        }
+        /* Estilizacion de primera letra con pseudoelementos */
+        p::first-letter{
+            /* cambio en la primera letra */
+            color: red;
+        }
+        /* agregar mas contenido antes con before */
+        p::before{
+            content: '💕';
+        }
+        /* agregar mas contenido despues con after */
+        p::after{
+            content: '❤️';
+        }
+        /* cambios a pseudo elementos */
+        ::placeholder{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>prueba</p>
+        <p>de </p>
+        <p>escritorio</p>
+    </div>
+    <input type="text" placeholder="name">
+</body>
+</html>

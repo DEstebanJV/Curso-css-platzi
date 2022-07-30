@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            width: 400px;
+            height: 400px;
+            background-color: chartreuse;
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* parte y selecta segun el tamaño en las porciones dichas para columnas */
+            grid-template-rows: 1fr 1fr 1fr 1fr;  /* parte y selecta segun el tamaño en las porciones dichas para filas*/
+
+        }
+        .item{ /* cada elemento esta en una cajita  */
+            background:orange;
+        }
+        .container .item:nth-child(1){
+            /* ubicacion del elemento en el grid */
+            grid-column: 1 / 2;
+        }
+        .container .item:nth-child(2){
+            background: red;
+            /* ubicacion del elemento en el grid */
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .container .item:nth-child(3){
+            background: blue;
+            /* ubicacion del elemento en el grid */
+            grid-column: 3 / 4;
+            grid-row: 3 ;
+
+        }
+        .container .item:nth-child(4){
+            background: purple;
+            grid-column: 4 / 5 ; /* cuantas lineas van a cubrir */
+            grid-row: 4;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

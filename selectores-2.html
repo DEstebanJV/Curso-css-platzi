@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* hijos descendientes */
+       /*  div p { */
+            /* en este ejemplo todos los p que esten dentro de un div se les realiza eso */
+       /*      color:orange;
+        } */
+
+        /* Hijo directo */
+        .padre > div {
+            color: lime;
+        }
+        /* elementos adyacentes (uno al lado del otro) */
+
+        .primerelemento + .segundoelemento {
+            color: orange;
+        }
+
+        /* elementos hermanos */
+
+        .hermanos ~ p{
+            color: aquamarine;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Hijos descendientes -->
+    <div>
+        <p>parrafo metido dentro de un div</p>
+        <p>Lorem, ipsum dolor sit ameZt consectetur adipisicing elit. Repellat, minima doloribus consequuntur nobis ipsum
+            ipsam cumque in laudantium labore dolorum possimus nesciunt fuga quaerat voluptatibus ullam blanditiis
+            reprehenderit distinctio veritatis!
+        </p>
+    </div>
+    <p> PARRAFO FUERA DEL DIV</p>
+
+    <!-- hijo directo -->
+    <div class="padre">
+        <div>
+            hola
+        </div>
+        <span>
+            <p>
+                prueba de hijo directo
+            </p>
+        </span>
+    </div>
+
+    <!-- elementos adyacentes -->
+    <span class="primerelemento">
+        este sera negro
+    </span>
+    <p class="segundoelemento">
+        y este naranja
+    </p>
+
+    <!-- elementos hermanos -->
+    <div >
+        <p class="hermanos">Soy un primo :D</p>
+        <p>primer hermano</p>
+        <p>segundo hermano</p>
+    </div>
+</body>
+
+</html>
